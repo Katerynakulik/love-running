@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-</style > * {
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -53,13 +54,14 @@ nav {
   display: none;
   top: 100%;
 }
-.nav-toggle:checked ~ nav {
+
+#nav-toggle:checked~nav {
   display: block;
 }
 #nav-toggle {
   display: none;
 }
-#nav-toggle-label {
+.nav-toggle-label {
   font-size: 2rem;
 }
 
@@ -70,4 +72,23 @@ main {
 }
 footer {
   background-color: orange;
+}
+@media screen and (min-width:768px) {
+    /*Header*/
+    nav{
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu{
+        display: flex;
+    }
+    #menu>li{
+        padding-left: 1rem;
+    }
+    .nav-toggle-label{
+        display: none;
+    }
 }
